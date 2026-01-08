@@ -49,6 +49,10 @@ protected:
 public:
 	virtual void ForceFinishNode() override;
 
+	/** Returns the subgraph asset. Available at runtime for graph traversal. */
+	UFUNCTION(BlueprintPure, Category = "FlowNode")
+	UFlowAsset* GetSubGraphAsset() const { return Asset.LoadSynchronous(); }
+
 protected:
 	virtual void OnLoad_Implementation() override;
 
