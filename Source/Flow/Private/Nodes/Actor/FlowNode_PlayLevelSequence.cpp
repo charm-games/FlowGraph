@@ -35,6 +35,8 @@ UFlowNode_PlayLevelSequence::UFlowNode_PlayLevelSequence(const FObjectInitialize
 	, ElapsedTime(0.0f)
 	, TimeDilation(1.0f)
 {
+	PlaybackSettings.bPauseAtEnd = true;
+
 #if WITH_EDITOR
 	Category = TEXT("Actor");
 	NodeDisplayStyle = FlowNodeStyle::Latent;
