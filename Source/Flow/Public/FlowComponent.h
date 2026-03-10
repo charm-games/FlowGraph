@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "Components/ActorComponent.h"
+#include "Components/SceneComponent.h"
 #include "GameplayTagContainer.h"
 
 #include "FlowSave.h"
@@ -42,7 +42,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FFlowComponentDynamicNotify, class 
 * Base component of Flow System - makes possible to communicate between Actor, Flow Subsystem and Flow Graphs
 */
 UCLASS(Blueprintable, meta = (BlueprintSpawnableComponent))
-class FLOW_API UFlowComponent : public UActorComponent, public IFlowOwnerInterface
+class FLOW_API UFlowComponent : public USceneComponent, public IFlowOwnerInterface
 {
 	GENERATED_UCLASS_BODY()
 
